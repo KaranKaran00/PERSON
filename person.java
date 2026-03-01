@@ -38,7 +38,7 @@ public class person extends JPanel {
         //setBackground(Color.blue);
         backgroundImg = new ImageIcon(getClass().getResource("backgroundImg.png")).getImage();
         leftImg = new ImageIcon(getClass().getResource("leftImg.png")).getImage();
-        //rightImg = new ImageIcon(getClass().getResource("rightImg")).getImage();
+//        rightImg = new ImageIcon(getClass().getResource("rightImg")).getImage();
 
         //person
         per2 = new per1(leftImg);
@@ -58,3 +58,4 @@ public class person extends JPanel {
         g.drawImage(per2.img,per2.x,per2.y,per2.width,per2.height,null);
     }
 }
+//check
