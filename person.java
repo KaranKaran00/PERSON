@@ -13,20 +13,48 @@ public class person extends JPanel {
     Image leftImg;
     Image rightImg;
 
+    // person position
+    int personX = boardWidth/8;
+    int personY = boardHeight/2;
+    int personWidth = 240;
+    int personHeight = 240;
+
+    class per1{
+        int x = personX;
+        int y = personY;
+        int width = personWidth;
+        int height = personHeight;
+        Image img;
+
+        per1(Image img){
+            this.img = img;
+        }
+    }
+    //game logic
+    per1 per2;
+
     person() {
         setPreferredSize(new Dimension(boardWidth, boardHeight));
         //setBackground(Color.blue);
         backgroundImg = new ImageIcon(getClass().getResource("backgroundImg.png")).getImage();
-        // leftImg = new ImageIcon(getClass().getResource("leftImg")).getImage();
-        // rightImg = new ImageIcon(getClass().getResource("rightImg")).getImage();
+        leftImg = new ImageIcon(getClass().getResource("leftImg.png")).getImage();
+        //rightImg = new ImageIcon(getClass().getResource("rightImg")).getImage();
+
+        //person
+        per2 = new per1(leftImg);
+
     }
 
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         draw(g);
     }
 
     public void draw(Graphics g) {
+        //background
         g.drawImage(backgroundImg, 0, 0, boardWidth, boardHeight, null);
+
+        //person
+        g.drawImage(per2.img,per2.x,per2.y,per2.width,per2.height,null);
     }
 }
