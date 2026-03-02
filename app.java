@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class app {
     public static void main(String[] args) {
-        int boardWidth = 500;
+        int boardWidth = 800;
         int boardHeight = 500;
 
         JFrame frame = new JFrame("PERSON");
