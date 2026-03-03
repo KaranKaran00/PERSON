@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.*;
 
-public class person extends JPanel {
+public class person extends JPanel implements ActionListener {
 
     int boardWidth = 800;
     int boardHeight = 500;
@@ -34,6 +34,8 @@ public class person extends JPanel {
     // game logic
     per1 per2;
 
+    Timer gameloop;
+
     person() {
         setPreferredSize(new Dimension(boardWidth, boardHeight));
         // setBackground(Color.blue);
@@ -43,7 +45,7 @@ public class person extends JPanel {
 
         // person
         per2 = new per1(leftImg);
-
+        gameloop = new Timer(1000 / 60, this);
     }
 
     public void paintComponent(Graphics g) {
@@ -57,6 +59,12 @@ public class person extends JPanel {
 
         // person
         g.drawImage(per2.img, per2.x, per2.y, per2.width, per2.height, null);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
     }
 }
 // check
