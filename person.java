@@ -46,6 +46,7 @@ public class person extends JPanel implements ActionListener {
         // person
         per2 = new per1(leftImg);
         gameloop = new Timer(1000 / 60, this);
+        gameloop.start();
     }
 
     public void paintComponent(Graphics g) {
@@ -54,6 +55,7 @@ public class person extends JPanel implements ActionListener {
     }
 
     public void draw(Graphics g) {
+        System.out.println("hahah");
         // background
         g.drawImage(backgroundImg, 0, 0, boardWidth, boardHeight, null);
 
@@ -63,8 +65,7 @@ public class person extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+        repaint();
     }
 }
 // check
